@@ -1,0 +1,243 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Orbitron:wght@400..900&display=swap');
+
+/* 기본 초기화 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: black;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+body {
+    background-color: #1e293b;
+    margin: 0 auto;
+}
+
+/* 헤더 */
+header {
+  width: 100%;
+
+}
+
+.header-inner {
+    max-width: 1200px;  
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+}
+
+.style-logo {
+    height: 80px; 
+    width: auto;
+    object-fit: contain;
+}
+
+.style-nav ul {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.style-nav li {
+    padding: 0;
+    color: #FFD700; 
+    font-weight: bold;
+    text-align: center;
+}
+
+.style-nav li a {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.style-nav li a:hover {
+    color: #d4af37;
+}
+
+/* 히어로 섹션 */
+.hero {
+    background-image: url(../source/다운로드\ \(1\).jfif);
+    background-size: cover;
+    padding: 80px 20px 50px 20px;
+    color: #fff;
+    text-align: center;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 23px;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 120px;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 35px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+
+/* 버튼 */
+.button {
+    border: 2px solid #fff;
+    padding: 8px 30px;
+    border-radius: 30px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #d4af37;
+    color: #ffffff;
+}
+
+/* 인포박스 */
+.info-box-tan {
+    background-color: #0e1a40;
+    color: #fff;
+    padding: 30px 30px 60px;
+    text-align: center;
+}
+
+.info-box-dark {
+    background-color: darkslategray;
+    color: #fff;
+    padding: 30px 30px 60px;
+    text-align: center;
+}
+
+/* 이미지 박스 */
+.image-box {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3; 
+    overflow: hidden;
+    position: relative;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 레이아웃 */
+.col {
+    width: 100%;
+    padding: 10px;
+}
+
+.row::before,
+.row::after {
+    content: "";
+    display: table;
+}
+
+.row::after {
+    clear: both;
+}
+
+/* 푸터 */
+footer {
+    padding: 20px 30px;
+}
+
+.footer-text {
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* 반응형 */
+@media (min-width: 768px) {
+    body {
+        max-width: 778px;
+    }
+
+    .style-nav ul li {
+        display: inline-block;
+    }
+
+    .style-nav ul {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 40px;
+        margin-bottom: 90px;
+    }
+
+    h2 {
+        margin-bottom: 16px;
+    }
+
+    .col-col-md-one-half {
+        width: 50%;
+        float: left;
+        padding: 10px;
+    }
+
+    .col {
+        float: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        max-width: 1200px;
+    }
+
+    .col-lg-one-fourth {
+        width: 25%;
+        float: left;
+    }
+}
